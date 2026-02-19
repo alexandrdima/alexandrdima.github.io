@@ -1,0 +1,41 @@
+<h2>Форма регистрации</h2>
+<form action="#" method="post">
+  <fieldset>
+    <legend>Учетные данные</legend>
+
+    <label for="reg_login">Придумайте логин:</label>
+    <input type="text" id="reg_login" name="login" value=""><br><br>
+
+    <label for="reg_pass">Пароль:</label>
+    <input type="password" id="reg_pass" name="pass" maxlength="20"><br><br>
+
+    <input type="hidden" name="user_level" value="newbie">
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Личная информация</legend>
+
+    <label for="fullname">Полное имя:</label>
+    <input type="text" id="fullname" name="fullname" size="30"><br><br>
+
+    <label for="birthday">Дата рождения:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+
+    <label for="country">Страна проживания:</label>
+    <select id="country" name="country">
+      <optgroup label="Европа">
+        <option value="france">Франция</option>
+        <option value="germany">Германия</option>
+      </optgroup>
+      <optgroup label="Азия">
+        <option value="japan">Япония</option>
+        <option value="korea" selected>Корея (выбрано по умолчанию)</option>
+      </optgroup>
+    </select><br><br>
+
+    <input type="button" value="Проверить логин (не работает)">
+    <input type="submit" value="Зарегистрироваться">
+    <input type="reset" value="Очистить форму">
+  </fieldset>
+</form>
