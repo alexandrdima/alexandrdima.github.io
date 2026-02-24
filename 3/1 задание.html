@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 3: Таблицы и списки</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Демонстрация работы с таблицами и списками</h1>
+
+    <!-- 1. Большая таблица, оформленная с помощью CSS -->
+    <h2>1. Большая таблица (Расписание занятий)</h2>
+    <table>
+        <caption>Расписание занятий на неделю</caption>
+        <thead>
+            <style>
+            .table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+                font-family: Arial, sans-serif;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            tr:hover {
+                background-color: #e0e0e0;
+            }
+            caption {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            
+            </style>
+            <tr>
+                <th>День недели</th>
+                <th>Время</th>
+                <th>Предмет</th>
+                <th>Преподаватель</th>
+                <th>Аудитория</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Понедельник</td>
+                <td>9:00 - 10:30</td>
+                <td>Математика</td>
+                <td>Иванов И.И.</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>Понедельник</td>
+                <td>10:45 - 12:15</td>
+                <td>Физика</td>
+                <td>Киков П.П.</td>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>Вторник</td>
+                <td>9:00 - 10:30</td>
+                <td>Химия</td>
+                <td>Александров С.С.</td>
+                <td>103</td>
+            </tr>
+            <tr>
+                <td>Вторник</td>
+                <td>10:45 - 12:15</td>
+                <td>Биология</td>
+                <td>Кузнецова К.К.</td>
+                <td>104</td>
+            </tr>
+            <tr>
+                <td>Среда</td>
+                <td>9:00 - 10:30</td>
+                <td>История</td>
+                <td>Васильев В.В.</td>
+                <td>105</td>
+            </tr>
+            <tr>
+                <td>Среда</td>
+                <td>10:45 - 12:15</td>
+                <td>Литература</td>
+                <td>Морозова М.М.</td>
+                <td>106</td>
+            </tr>
+            <tr>
+                <td>Четверг</td>
+                <td>9:00 - 10:30</td>
+                <td>География</td>
+                <td>Новиков Н.Н.</td>
+                <td>107</td>
+            </tr>
+            <tr>
+                <td>Четверг</td>
+                <td>10:45 - 12:15</td>
+                <td>Иностранный язык</td>
+                <td>Федорова Ф.Ф.</td>
+                <td>108</td>
+            </tr>
+            <tr>
+                <td>Пятница</td>
+                <td>9:00 - 10:30</td>
+                <td>Информатика</td>
+                <td>Алексеев А.А.</td>
+                <td>109</td>
+            </tr>
+            <tr>
+                <td>Пятница</td>
+                <td>10:45 - 12:15</td>
+                <td>Физкультура</td>
+                <td>Григорьев Г.Г.</td>
+                <td>Спортзал</td>
+            </tr>
+        </tbody>
+    </table>
