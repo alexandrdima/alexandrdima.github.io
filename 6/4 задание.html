@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Аудио со Смешариками</title>
+    <style>
+        body {
+            background-color: #ffe0b0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #6b8e23;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #556b2f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>🎵 Песенки из Смешариков</h2>
+    
+    
+    <audio controls>
+        <source src="https://rus.hitmotop.com/get/music/20170905/Smeshariki_-_Ot_vinta_48225827.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+    
+    <p><i>Доступные форматы: MP3, OGG</i></p>
+    <p><small>⭐ Примечание: для настоящего проекта нужен файл с песней "От винта" или другой</small></p>
+    
+    <br>
+    <h3>🔽 Переключиться 🔽</h3>
+    <button onclick="parent.infoFrame.location='video.html'">📹 Видео</button>
+    <button onclick="parent.infoFrame.location='audio.html'">🎵 Аудио</button>
+    <button onclick="parent.infoFrame.location='photo.html'">📸 Фото</button>
+    <button onclick="parent.infoFrame.location='gif.html'">🎞️ GIF</button>
+</body>
+</html>
