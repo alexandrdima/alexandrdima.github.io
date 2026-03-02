@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лаб 7</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .section { background: white; padding: 15px; margin: 20px 0; border-radius: 8px; }
+        
+        /* 1. z-index */
+        .zindex-box { position: relative; height: 150px; background: #ddd; }
+        .zindex-box div { position: absolute; width: 150px; height: 80px; padding: 10px; border: 2px solid black; }
+        .z1 { background: blue; top: 20px; left: 20px; z-index: 1; }
+        .z2 { background: green; top: 50px; left: 50px; z-index: 2; }
+        .z3 { background: orange; top: 80px; left: 80px; z-index: 3; }
+        
+        /* clamp() */
+        .clamp-text { font-size: clamp(16px, 5vw, 30px); background: #333; color: white; padding: 10px; text-align: center; }
+        
+        /* 2. position */
+        .pos-container { position: relative; height: 200px; border: 2px solid #999; padding: 10px; margin: 20px 0; }
+        .pos-block { width: 150px; height: 70px; padding: 5px; border: 2px solid; }
+        .static { position: static; background: gray; }
+        .relative { position: relative; top: 20px; left: 30px; background: red; }
+        .absolute { position: absolute; bottom: 10px; right: 10px; background: yellow; }
+        .fixed { position: fixed; bottom: 20px; left: 20px; background: purple; color: white; z-index: 100; }
+        
+        /* 3. Flexbox */
+        .flex-container { display: flex; flex-wrap: wrap; gap: 15px; background: #3498db; padding: 20px; justify-content: space-around; }
+        .flex-item { background: white; padding: 25px; flex: 1 1 150px; text-align: center; border-radius: 5px; }
+        .flex-item.special { flex: 2 1 200px; background: #f1c40f; order: -1; }
+        .flex-item.bottom { align-self: flex-end; background: #e67e22; }
+        
+        /* 4. Grid */
+        .grid-container { display: grid; grid-template-columns: 150px 1fr 120px; grid-template-rows: 80px 80px 80px; gap: 10px; background: #16a085; padding: 15px; }
+        .grid-item { background: #ecf0f1; padding: 15px; border: 2px solid #2c3e50; }
+        .item1 { grid-column: 1 / 3; grid-row: 1 / 2; background: #f39c12; }
+        .item2 { grid-column: 3 / 4; grid-row: 1 / 3; background: #e74c3c; }
+        .item3 { grid-column: 1 / -1; grid-row: 3 / 4; background: #2ecc71; }
+        .item4 { grid-column: span 2; background: #3498db; }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная 7</h1>
+
+    <!-- 1. z-index и clamp() -->
+    <div class="section">
+        <h3>z-index</h3>
+        <div class="zindex-box">
+            <div class="z1">Блок 1 (z:1)</div>
+            <div class="z2">Блок 2 (z:2)</div>
+            <div class="z3">Блок 3 (z:3)</div>
+        </div>
+        
+        <h3>clamp()</h3>
+        <div class="clamp-text">Размер текста от 16px до 30px</div>
+    </div>
+
+    <!-- 2. Четыре типа position -->
+    <div class="section">
+        <h3>position</h3>
+        <div class="pos-container">
+            <div class="pos-block static">static</div>
+            <div class="pos-block relative">relative (сдвиг)</div>
+            <div class="pos-block absolute">absolute</div>
+        </div>
+        <div class="pos-block fixed">fixed</div>
+        <p style="margin-top: 40px;">* fixed блок внизу слева</p>
+    </div>
+
+    <!-- 3. Flexbox сетка -->
+    <div class="section">
+        <h3>Flexbox</h3>
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item special">flex:2, order:-1</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item bottom">align-self</div>
+            <div class="flex-item">5</div>
+        </div>
+    </div>
+
+    <!-- 4. Grid -->
+    <div class="section">
+        <h3>Grid</h3>
+        <div class="grid-container">
+            <div class="grid-item item1">col 1-3, row 1</div>
+            <div class="grid-item item2">col 3, row 1-3</div>
+            <div class="grid-item">обычный</div>
+            <div class="grid-item">обычный</div>
+            <div class="grid-item item3">col 1-(-1)</div>
+            <div class="grid-item item4">span 2</div>
+        </div>
+    </div>
+    
+    <div style="height: 80px;"></div>
+</body>
+</html>
