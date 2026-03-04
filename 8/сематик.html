@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая верстка</title>
+    <style>
+        header, footer { background: #e65100; color: white; padding: 20px; box-shadow: 5px 5px 10px black; }
+        main { display: flex; gap: 5px; margin-top: 5px; }
+        article { flex: 2; background: #ffb74d; padding: 20px; box-shadow: 5px 5px 10px black; }
+        aside { flex: 1; background: #ff9800; padding: 20px; box-shadow: 5px 5px 10px black; }
+        footer { background: #bf360c; }
+        @media (max-width: 600px) { main { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>ОРАНЖЕВАЯ ШАПКА</header>
+    <main>
+        <article>ОСНОВНОЙ КОНТЕНТ</article>
+        <aside>САЙДБАР</aside>
+    </main>
+    <footer>ПОДВАЛ</footer>
+</body>
+</html>

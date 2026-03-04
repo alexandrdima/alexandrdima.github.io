@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная верстка</title>
+    <style>
+        .header, .footer { background: #2e7d32; color: white; padding: 20px; border-radius: 30px; margin: 5px; }
+        .main { display: flex; gap: 5px; }
+        .content { flex: 2; background: #a5d6a7; padding: 20px; border-radius: 30px; }
+        .sidebar { flex: 1; background: #66bb6a; padding: 20px; border-radius: 30px; }
+        .footer { background: #1b5e20; }
+        @media (max-width: 600px) { .main { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="header">ЗЕЛЕНАЯ ШАПКА</div>
+    <div class="main">
+        <div class="content">ОСНОВНОЙ КОНТЕНТ</div>
+        <div class="sidebar">САЙДБАР</div>
+    </div>
+    <div class="footer">ПОДВАЛ</div>
+</body>
+</html>
