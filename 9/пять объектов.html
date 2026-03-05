@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2 - Пять объектов</title>
+    <style>
+        body {
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            justify-content: center;
+        }
+        
+        .obj {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .obj1 {
+            background: #ff6f61;
+            animation: rotate-skew 3s infinite linear;
+        }
+        
+        .obj2 {
+            background: #6b8cff;
+            animation: scale-color 2s infinite alternate;
+        }
+        
+        .obj3 {
+            background: #6bc9a5;
+            animation: move 4s infinite;
+        }
+        
+        .obj4 {
+            background: #e07db7;
+            transition: transform 0.5s, background 0.5s;
+        }
+        
+        .obj4:hover {
+            transform: scale(1.5) rotate(30deg);
+            background: #f5b342;
+        }
+        
+        .obj5 {
+            background: #9b6b9e;
+            animation: flip 3s infinite alternate;
+        }
+        
+        @keyframes rotate-skew {
+            0% { transform: skew(5deg,5deg) rotate(0deg); }
+            100% { transform: skew(-5deg,-5deg) rotate(360deg); }
+        }
+        
+        @keyframes scale-color {
+            0% { transform: scale(0.7); }
+            100% { transform: scale(1.3); background: #ff9a3c; }
+        }
+        
+        @keyframes move {
+            0% { transform: translate(0,0); }
+            25% { transform: translate(30px,-20px); }
+            50% { transform: translate(-20px,30px); }
+            75% { transform: translate(-30px,-30px); }
+            100% { transform: translate(0,0); }
+        }
+        
+        @keyframes flip {
+            0% { transform: rotateX(0deg) rotateY(0deg); opacity: 1; }
+            100% { transform: rotateX(360deg) rotateY(360deg); opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="obj obj1"></div>
+        <div class="obj obj2"></div>
+        <div class="obj obj3"></div>
+        <div class="obj obj4"></div>
+        <div class="obj obj5"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1 - Прыгающий мяч</title>
+    <style>
+        body {
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .scene {
+            text-align: center;
+        }
+        
+        .ball {
+            width: 80px;
+            height: 80px;
+            background: #d8466f;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: bounce 1.2s infinite ease-in-out;
+            transform-origin: center bottom;
+        }
+        
+        .shadow {
+            width: 80px;
+            height: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50%;
+            filter: blur(3px);
+            margin: 0 auto;
+            animation: shadow 1.2s infinite ease-in-out;
+        }
+        
+        .ground {
+            width: 200px;
+            height: 5px;
+            background: #8b5e3c;
+            margin: 10px auto 0;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translateY(0) scale(1,1); }
+            45% { transform: translateY(-120px) scale(1,1); }
+            70% { transform: translateY(5px) scale(1.2,0.8); }
+            100% { transform: translateY(0) scale(1,1); }
+        }
+        
+        @keyframes shadow {
+            0% { transform: scale(1); opacity: 0.4; }
+            45% { transform: scale(0.8); opacity: 0.1; }
+            70% { transform: scale(1.5); opacity: 0.6; }
+            100% { transform: scale(1); opacity: 0.4; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="ball"></div>
+        <div class="shadow"></div>
+        <div class="ground"></div>
+    </div>
+</body>
+</html>

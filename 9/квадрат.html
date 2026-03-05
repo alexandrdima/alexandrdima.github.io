@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3 - Квадрат квадрат бъётся о границы</title>
+    <style>
+        body {
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .field {
+            width: 400px;
+            height: 250px;
+            border: 4px solid #333;
+            background: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .square {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: move-square 5s infinite alternate, square-color 5s infinite step-end;
+        }
+        
+        @keyframes move-square {
+            0% { transform: translate(0,0); }
+            20% { transform: translate(350px,0); }
+            40% { transform: translate(350px,200px); }
+            60% { transform: translate(0,200px); }
+            80% { transform: translate(0,0); }
+            100% { transform: translate(300px,100px); }
+        }
+        
+        @keyframes square-color {
+            0% { background: #f97316; }
+            20% { background: #ff2b2b; }
+            40% { background: #2bff88; }
+            60% { background: #2bc0ff; }
+            80% { background: #ffcc00; }
+            100% { background: #f97316; }
+        }
+    </style>
+</head>
+<body>
+    <div class="field">
+        <div class="square"></div>
+    </div>
+</body>
+</html>
